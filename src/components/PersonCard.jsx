@@ -11,7 +11,7 @@ class PersonCard extends Component {
     render() {
         return <div>
     <ul>
-        <h2>{this.props.name}</h2>
+        <h2>{this.props.firstname} {this.props.lastname}</h2>
         <li>Age: {this.state.age}</li>
         <li>Hair Color: {this.props.hairColor}</li>
         <button onClick={() =>this.setState({age: this.state.age + 1}) }>Bithday Button for {this.props.name}</button>
