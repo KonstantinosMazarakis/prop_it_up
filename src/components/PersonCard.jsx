@@ -1,23 +1,17 @@
 import React, { Component } from 'react';
     
     
-class PersonCard extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            age: this.props.age
-        }
-    }
-    render() {
-        return <div>
+const PersonCard = props => {
+        return (
+<div>
     <ul>
-        <h2>{this.props.firstname} {this.props.lastname}</h2>
-        <li>Age: {this.state.age}</li>
-        <li>Hair Color: {this.props.hairColor}</li>
-        <button onClick={() =>this.setState({age: this.state.age + 1}) }>Bithday Button for {this.props.name}</button>
+        <h2>{props.firstname} {props.lastname}</h2>
+        <li>Age: {props.age}</li>
+        <li>Hair Color: {props.hairColor}</li>
+        {/* <button onClick={() =>this.setState({age: this.state.age + 1}) }>Bithday Button for {this.props.firstname}</button> */}
     </ul>
-</div>;
+</div>);
     }
-}
+
     
 export default PersonCard;
